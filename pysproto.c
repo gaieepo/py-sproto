@@ -224,7 +224,7 @@ py_decode(PyObject *self, PyObject *args) {
     }
     if (PyErr_Occurred())
         return NULL;
-    res = Py_BuildValue("(Oi)", dict, r);
+    PyObject* res = Py_BuildValue("(Oi)", dict, r);
     Py_XDECREF(dict);
     return res;
 }
